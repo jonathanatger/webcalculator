@@ -1,3 +1,3 @@
 ### Javascript Calculator
 
-Made to calculate on the web 
+Made to calculate on the web !
