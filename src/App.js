@@ -8,9 +8,7 @@ const config = { }
 const math = create(all, config);
 
 /* TODO
-Update the formula function
-Calculate the input function
-
+restart after a result
 
 */
 
@@ -181,9 +179,9 @@ class Controls extends React.Component {
   render() {
     const digits = [];
     for(let i = 1; i<=9; i++){digits.push(
-      <button className="digit-btn" onClick={() => this.props.dispDigit(i)}> {i} </button>
+      <button className="digit-btn" id={i.toString()} onClick={() => this.props.dispDigit(i)}> {i} </button>
     )};
-    digits.push(<button className="digit-btn" onClick={() => this.props.dispDigit("0")}> 0 </button>)
+    digits.push(<button className="digit-btn" id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
     digits.push(<button className="digit-btn" onClick={() => this.props.dispDigit(".")}> . </button>)
 
     return (
