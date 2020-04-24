@@ -186,7 +186,7 @@ class Controls extends React.Component {
 
 
 
-    digits.push(<button className="digit-btn" id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
+    digits.push(<button className="digit-btn double-btn" id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
     digits.push(<button className="digit-btn" onClick={() => this.props.dispDigit(".")}> . </button>)
 
     return (

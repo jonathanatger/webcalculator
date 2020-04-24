@@ -63,6 +63,10 @@ body {
   margin: 3px;
   font-family: Audiowide;
   color: #c94c4c;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .controlpanel > button:focus {
@@ -76,6 +80,10 @@ body {
 .controlpanel > button.digit-btn {
   height: 23%;
   width: 28%;
+}
+
+.controlpanel > button.digit-btn.double-btn {
+  width: 60%;
 }
 
 .controlpanel > button.operator-btn {
@@ -133,6 +141,10 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #screen h1, #screen h2 {

@@ -49,6 +49,7 @@ body{
   margin : 3px;
   font-family: $main-font;
   color : $thir-color;
+  user-select: none;
   &:focus{
     outline : 0;
   }
@@ -57,8 +58,12 @@ body{
   }
   &.digit-btn{
     height : 23%;
-    width: 28%;
+    width: 28%;    
+    &.double-btn{
+      width: 60%;      
+    }
   }
+
   &.operator-btn{
     width: 100%;
   }
@@ -98,6 +103,7 @@ body{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  user-select: none;
   
   
   h1, h2{
