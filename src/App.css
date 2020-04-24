@@ -2,6 +2,7 @@
   background-color: #eea29a;
   height: 500px;
   width: 80%;
+  min-width: 400px;
   max-width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;

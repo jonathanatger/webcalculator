@@ -8,6 +8,7 @@ $thir-color : #c94c4c;
   background-color: $prim-color;
   height:500px;
   width:80%;
+  min-width: 400px;
   max-width: 800px;
   display: flex;
   flex-direction: column;

@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore} from 'redux'
 import {Provider, connect} from 'react-redux';
-import thunk from 'redux-thunk'
 import {create, all} from 'mathjs' 
 const config = { }
 const math = create(all, config);
@@ -180,14 +179,14 @@ class Controls extends React.Component {
     const digits = [];
     for(let i = 1; i<=9; i++){
       digits.push(
-      <button className="digit-btn" id={i.toString()} onClick={this.colorSwitch, () => this.props.dispDigit(i)}> {i} </button>
+      <button className="digit-btn" key={i.toString()} id={i.toString()} onClick={this.colorSwitch, () => this.props.dispDigit(i)}> {i} </button>
     );    
   };
 
 
 
-    digits.push(<button className="digit-btn double-btn" id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
-    digits.push(<button className="digit-btn" onClick={() => this.props.dispDigit(".")}> . </button>)
+    digits.push(<button className="digit-btn double-btn" key={"0"} id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
+    digits.push(<button className="digit-btn" key={"."} onClick={() => this.props.dispDigit(".")}> . </button>)
 
     return (
       <div id='controls'>
