@@ -49,9 +49,11 @@ body{
   margin : 3px;
   font-family: $main-font;
   color : $thir-color;
+  &:focus{
+    outline : 0;
+  }
   &:hover{
     opacity: 0.8;
-    
   }
   &.digit-btn{
     height : 23%;
@@ -59,6 +61,9 @@ body{
   }
   &.operator-btn{
     width: 100%;
+  }
+  &:active{
+    background-color : rgb(243, 198, 100) !important;
   }
 }
 

@@ -65,6 +65,10 @@ body {
   color: #c94c4c;
 }
 
+.controlpanel > button:focus {
+  outline: 0;
+}
+
 .controlpanel > button:hover {
   opacity: 0.8;
 }
@@ -76,6 +80,10 @@ body {
 
 .controlpanel > button.operator-btn {
   width: 100%;
+}
+
+.controlpanel > button:active {
+  background-color: #f3c664 !important;
 }
 
 #main-container {
