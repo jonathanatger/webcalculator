@@ -121,6 +121,10 @@ body {
   height: 200px;
   width: 100%;
   margin: 5px;
+  color: #c94c4c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #screen h1, #screen h2 {

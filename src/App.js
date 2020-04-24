@@ -167,27 +167,31 @@ const ConnectedScreen = connect(mapStateToProps, null)(Screen)
 class Controls extends React.Component {
   constructor(props) {
     super(props);
-    this.test = this.test.bind(this);
+    this.colorSwitch = this.colorSwitch.bind(this);
   }
 
-  test = function(){
-      let disp = document.getElementById("lowerDisplay");
-      disp.innerHTML = "Clicked";
-      setTimeout(() => {disp.innerHTML = 0}, 1000);
+  colorSwitch = function(event){
+
   }
+
+  
 
   render() {
     const digits = [];
-    for(let i = 1; i<=9; i++){digits.push(
-      <button className="digit-btn" id={i.toString()} onClick={() => this.props.dispDigit(i)}> {i} </button>
-    )};
+    for(let i = 1; i<=9; i++){
+      digits.push(
+      <button className="digit-btn" id={i.toString()} onClick={this.colorSwitch, () => this.props.dispDigit(i)}> {i} </button>
+    );
+    
+  };
+
     digits.push(<button className="digit-btn" id={"0"} onClick={() => this.props.dispDigit("0")}> 0 </button>)
     digits.push(<button className="digit-btn" onClick={() => this.props.dispDigit(".")}> . </button>)
 
     return (
       <div id='controls'>
         <div id="operators" className="controlpanel">
-          <button className="operator-btn" onClick={() => this.props.dispOperator("+")}> {"+"} </button>
+          <button className="operator-btn" id={"+"} onClick={() => this.props.dispOperator("+")}> {"+"} </button>
           <button className="operator-btn" onClick={() => this.props.dispOperator("*")}> {"*"} </button>
           <button className="operator-btn" onClick={() => this.props.dispOperator("-")}> {"-"} </button>
           <button className="operator-btn" onClick={() => this.props.dispOperator("/")}> {"/"} </button>
@@ -203,8 +207,6 @@ class Controls extends React.Component {
     )
   }
 }
-
-
 
 //ReactRedux for Controls
 const mapDispatchToState = (dispatch) => {

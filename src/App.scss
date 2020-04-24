@@ -1,0 +1,104 @@
+$main-font: Audiowide;
+$bg-color : #deeaee;
+$prim-color : #eea29a;
+$sec-color : #b1cbbb;
+$thir-color : #c94c4c;
+
+#app {
+  background-color: $prim-color;
+  height:500px;
+  width:80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding : 15px 15px;
+  box-shadow: 5px 5px $thir-color ;
+}
+
+
+body{
+  background-color : $bg-color;
+  overflow-x: hidden;
+}
+
+#controls{
+  background-color: $prim-color;
+  border: solid $thir-color;
+  display:grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  width:100%;
+  height : 300px;
+  margin : 5px;
+  justify-content: space-evenly;
+}
+
+.controlpanel{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding : 0px 5px;
+} 
+
+.controlpanel>button{
+  
+  background-color: $sec-color;
+  border : solid $thir-color;
+  margin : 3px;
+  font-family: $main-font;
+  color : $thir-color;
+  &:hover{
+    opacity: 0.8;
+    
+  }
+  &.digit-btn{
+    height : 23%;
+    width: 28%;
+  }
+  &.operator-btn{
+    width: 100%;
+  }
+}
+
+
+
+#main-container{
+  width: 100vw;
+  height : 100vh;
+  font-family : $main-font;
+  color: $thir-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h5{
+    color:rgb(165, 162, 162);
+  }
+  
+}
+
+#screen{
+  background-color: $prim-color;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-end;
+  border: solid $thir-color;
+  height:200px;
+  width: 100%;
+  margin : 5px; 
+  color : $thir-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  
+  h1, h2{
+    padding : 10px;  
+    
+  }
+  
+}
+
